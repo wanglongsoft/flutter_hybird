@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="142dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/content_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/wallet_ui_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/horizontal_guideline_22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.22" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vertical_guideline_22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.40" />
+
+            <View
+                android:id="@+id/tv_my_wallet_divide"
+                android:layout_width="4dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:background="#7C2200"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_my_wallet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:gravity="center_vertical"
+                android:text="钱包"
+                android:textColor="#7C2200"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_my_wallet_divide"
+                app:layout_constraintStart_toEndOf="@+id/tv_my_wallet_divide"
+                app:layout_constraintTop_toTopOf="@+id/tv_my_wallet_divide" />
+
+            <TextSwitcher
+                android:id="@+id/notice_switch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:background="#00000000"
+                android:inAnimation="@anim/text_switcher_in"
+                android:outAnimation="@anim/text_switcher_out"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline_22"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/vertical_guideline_22"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.yunda.boosttestandroid.MarqueeTextView
+                    android:id="@+id/text_front"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/notice_ui_wallet"
+                    android:drawablePadding="5dp"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#7C2200"
+                    android:textSize="14sp" />
+
+                <com.yunda.boosttestandroid.MarqueeTextView
+                    android:id="@+id/text_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/notice_ui_wallet"
+                    android:drawablePadding="5dp"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#7C2200"
+                    android:textSize="14sp" />
+            </TextSwitcher>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_vertical_33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.33" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_vertical_165"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.165" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_vertical_495"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.495" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_vertical_66"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.66" />
+
+            <ImageView
+                android:id="@+id/new_wallet_bill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_ui_wallet_bill"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_33"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontal_guideline_22" />
+
+            <TextView
+                android:id="@+id/bill_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="资金记录"
+                android:textColor="#333333"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/new_wallet_bill"
+                app:layout_constraintStart_toStartOf="@+id/new_wallet_bill"
+                app:layout_constraintTop_toBottomOf="@+id/new_wallet_bill" />
+
+            <View
+                android:id="@+id/pend_settle_amount_click"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/bill_text"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_33"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/new_wallet_bill" />
+
+            <ImageView
+                android:id="@+id/new_wallet_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_ui_wallet_order"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_66"
+                app:layout_constraintStart_toStartOf="@+id/guideline_vertical_33"
+                app:layout_constraintTop_toBottomOf="@+id/horizontal_guideline_22" />
+
+            <TextView
+                android:id="@+id/order_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="打款订单"
+                android:textColor="#333333"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/new_wallet_order"
+                app:layout_constraintStart_toStartOf="@+id/new_wallet_order"
+                app:layout_constraintTop_toBottomOf="@+id/new_wallet_order" />
+
+            <View
+                android:id="@+id/settle_amount_click"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/order_text"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_66"
+                app:layout_constraintStart_toStartOf="@+id/guideline_vertical_33"
+                app:layout_constraintTop_toTopOf="@+id/new_wallet_order" />
+
+            <ImageView
+                android:id="@+id/new_wallet_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_ui_wallet_item"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline_vertical_66"
+                app:layout_constraintTop_toBottomOf="@+id/horizontal_guideline_22" />
+
+            <TextView
+                android:id="@+id/wallet_item_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="钱包"
+                android:textColor="#333333"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/new_wallet_item"
+                app:layout_constraintStart_toStartOf="@+id/new_wallet_item"
+                app:layout_constraintTop_toBottomOf="@+id/new_wallet_item" />
+
+            <View
+                android:id="@+id/wallet_view_click"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/wallet_item_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline_vertical_66"
+                app:layout_constraintTop_toTopOf="@+id/new_wallet_item" />
+
+            <TextView
+                android:id="@+id/bill_corner_mark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="11dp"
+                android:background="@drawable/wallet_ui_corner_mark_bg"
+                android:text="开户有礼"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="@+id/guideline_vertical_165"
+                app:layout_constraintTop_toBottomOf="@+id/horizontal_guideline_22" />
+
+            <TextView
+                android:id="@+id/settle_corner_mark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="11dp"
+                android:background="@drawable/wallet_ui_corner_mark_bg"
+                android:text="开户有礼"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="@+id/guideline_vertical_495"
+                app:layout_constraintTop_toBottomOf="@+id/horizontal_guideline_22" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/parent_horizontal_guideline_22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.22" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_vertical_805"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.805" />
+
+        <TextView
+            android:id="@+id/wallet_corner_mark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="11dp"
+            android:background="@drawable/wallet_ui_corner_mark_bg"
+            android:text="开户有礼"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline_vertical_805"
+            app:layout_constraintTop_toBottomOf="@+id/parent_horizontal_guideline_22" />
+
+        <TextView
+            android:id="@+id/access_abnormal"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:text="数据获取异常，请点击重试!"
+            android:textColor="#FF734C21"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/content_view"
+            app:layout_constraintEnd_toEndOf="@+id/content_view"
+            app:layout_constraintStart_toStartOf="@+id/content_view"
+            app:layout_constraintTop_toTopOf="@+id/content_view" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
