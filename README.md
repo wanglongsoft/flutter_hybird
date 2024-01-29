@@ -20,15 +20,15 @@ AndroidStudio版本：**4.1.2**
 * bruno使用方便，功能强大，包含了flutter工作中常用的大部分组件，推荐使用
 * FlutterBoost是一个Flutter插件，它可以轻松地为现有原生应用程序提供Flutter混合集成方案。FlutterBoost的理念是将Flutter像Webview那样来使用。在现有应用程序中同时管理Native页面和Flutter页面并非易事。 FlutterBoost帮你处理页面的映射和跳转，你只需关心页面的名字和参数即可
 #### 运行效果(工程根目录images文件夹)
-<img src="images/002.jpg" alt="002" style="zoom:50%;" />
+<img src="images/002.jpg" alt="002" width=60% />
 
-<img src="images/003.jpg" alt="003" style="zoom:50%;" />
+<img src="images/003.jpg" alt="003" width=60% />
 
-<img src="images/004.jpg" alt="004" style="zoom:50%;" />
+<img src="images/004.jpg" alt="004" width=60% />
 
-<img src="images/005.jpg" alt="003" style="zoom:50%;" />
+<img src="images/005.jpg" alt="003" width=60% />
 
-<img src="images/008.jpg" alt="003" style="zoom:50%;" />
+<img src="images/008.jpg" alt="003" width=60% />
 
-<img src="images/009.jpg" alt="002" style="zoom:50%;" />
+<img src="images/009.jpg" alt="002" width=60% />
 
